@@ -8,7 +8,8 @@ public class Journal
     {"What was the best part of your day? ",
     "What is your favorite food? ",
     "What is something you learned these past few weeks? ",
-    "What is something that motivates you to do your best every day? "};
+    "What is something that motivates you to do your best every day? ",
+    "What did you learn in your scripture study this week? How does it impact you?"};
     public List<Entry> _entries = new List<Entry>();
 
     public Journal()
