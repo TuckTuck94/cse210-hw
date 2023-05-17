@@ -17,7 +17,7 @@ class Program
         
         string first_response = "-1";
 
-        Journal journal = new Journal();
+        Journal journal = new Journal();Lo
 
         do
         {
