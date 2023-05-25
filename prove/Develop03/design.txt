@@ -1,0 +1,30 @@
+class : Scripture
+
+Atrributes:
+
+* _references: 
+* _words : List
+* _hiddenwords : List
+
+
+
+
+
+
+
+
+
+
+
+
+
+class: Reference
+
+ 
+
+
+
+
+
+
+class: Word
