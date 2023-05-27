@@ -1,24 +1,8 @@
+class Word{
 
-public class Word
-{
-  private string _text;
-  private bool _isvisible;
+    public string _text {get;}
 
-  public Word(string text)
-  {
-    _text = text;
-    _isvisible = true;
-  }
-
-  public string GetWord()
-  {
-    return _text;
-  }
-
-  // Getter for _isvisible
-
-  // Hide word method (setter)
-  // Set the _isvisible attribute to false
-
-
+    public Word(string text){
+        _text = text;
+    }
 }

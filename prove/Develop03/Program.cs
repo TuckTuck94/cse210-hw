@@ -1,45 +1,35 @@
 using System;
 
+
 class Program
 {
-  static void Main(string[] args)
-  {
-    // create random class object
-
-    // Create class object (instantiate) (create an instanxe of)
-    // (access type *when its a class attribute*) (class type) (object name) = new (constructor)
-    Scripture scripture1 = new Scripture("And it came to pass");
-    References reference1 = new References("John", "3", "5");
-
-    // created embedded function (method)
-    bool Display()
+    static void Main(string[] args)
     {
-        foreach (Word word in scripture1.GetWords())
-        {
-            Console.Write(word.GetWord() + " ");
+        Scripture scripture = new Scripture("1 Nephi 2","Yea, I make a record in the language of my father, which consists of the learning of the Jews and the language of the Egyptians.");
+
+        
+
+        while(!scripture.AllWordsHidden){
+
+            Console.Clear();    
+            scripture.Display();
+            Console.WriteLine();
+            Console.WriteLine("Press Enter to hide words or type 'quit' to exit.");
+            
+            string input = Console.ReadLine();
+
+            if (input.ToLower() == "quit"){
+                break;
+            }
+            else{
+                scripture.HideRandomWord();
+            }
         }
-        // print the reference by calling the GetRefernce method (reference1.GetReference())
 
-        // call the GetWordsHIdden
-        // if that return is true
-            // return false
+        Console.Clear();
+        scripture.DisplayHidden();
 
-        // Ask the user if they want to quit or continue
-        // capture input in a variable
-        // if input was "quit"
-        //      return false
-        // else return true
+        Console.WriteLine("Press any key to exit.");
+        Console.ReadKey();
     }
-
-    // while(Display())
-    //  use a loop and random class to hide three words
-    
-    
-
-
-
-
-
-
-  }
 }
