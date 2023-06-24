@@ -9,18 +9,18 @@ class ChecklistGoal : Goal
         _bonuspoints = bonuspoints;
         _target = target; 
     }
-    public ChecklistGoal(string name, string description, int points, bool isComplete, int bonuspoints, int target) : base(name, description, points, isComplete)
-    {
-        _bonuspoints = bonuspoints;
-        _target = target; 
-    }
 
     public override double RecordEvent()
     {
-        // increment our quantity
-        // check if they have reached thier target
-        // award bonus points if they hit the target and set goal to completed
-        // otherwise just awrd normal points
-        return 0.0;
+        _quantity++;
+        if(_quantity == _target)
+        {
+            _iscomplete = true;
+            Console.WriteLine($"Congratulations, you reached your goal! You have earned {_points} points! In addition, you have earned {_bonuspoints} Bonus Points!");
+            // return the points + bonus
+            return _points + _bonuspoints;
+        }
+        Console.WriteLine($"Congratulations, you completed your task! You have earned {_points} points!");
+        return _points;
     }
 }
