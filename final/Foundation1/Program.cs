@@ -11,6 +11,7 @@ class Program
         wowVideoComments.Add(new Comment("John", "I agree!"));
         wowVideoComments.Add(new Comment("Benson", "I know, right?"));
         wowVideoComments.Add(new Comment("David", "100%"));
+        Console.WriteLine(wowVideoComments);
 
         videos.Add(new Video("Pulling off something amazing!", "Ruben", 60, wowVideoComments));
         
